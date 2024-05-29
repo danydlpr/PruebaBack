@@ -249,7 +249,7 @@ describe('ProductoService', () => {
   });
 
   describe('deleteStoreFromProduct', () => {
-    it('should remove a store from a product', async () => {
+    it('should delete a store from a product', async () => {
       const productos = await service.findAll();
       await service.deleteStoreFromProduct(
         productos[0].id,
@@ -257,6 +257,7 @@ describe('ProductoService', () => {
       );
 
       const producto = await service.findOne(productos[0].id);
+
       expect(producto.tiendas).not.toEqual(
         expect.arrayContaining([
           expect.objectContaining({

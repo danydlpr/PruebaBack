@@ -15,7 +15,7 @@ import { Tienda } from './tienda/tienda.entity';
       port: 5432,
       username: 'postgres',
       password: '123',
-      database: 'test',
+      database: 'postgres',
       entities: [Producto, Tienda],
       synchronize: true,
     }),
